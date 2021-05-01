@@ -68,3 +68,12 @@ Then fine-tune the iris pre-trained model on the subdatasets.
     python finetune_local_inner_outer.py --gpu 0 --bs 16 --name finetune --epoch 200 --net unet_resnet34 --fold 0 --dataset Asia --pretrained trained_models/All/Local_inner_outer/bsaeline_UNet_ResNet34/bs20_epoch500_fold0/best_model.pth
     # CASIA-Iris-Mobile-V1.0
     python finetune_local_inner_outer.py --gpu 0 --bs 28 --name finetune --epoch 000 --net unet_resnet34 --fold 0 --dataset M1 --pretrained trained_models/All/Local_inner_outer/bsaeline_UNet_ResNet34/bs20_epoch500_fold0/best_model.pth
+
+### Validation set evaluation
+
+    # for semgentation
+    python predict_seg_val.py --gpu 0 --net unet_resnet34 --fold 0 --model_path model_path --dataset subdataset
+    
+    # for location
+    python predict_local_iris_val.py --gpu 0 --net unet_resnet34 --fold 0 --model_path model_path --dataset subdataset
+*model_path* specifies the path of the corresponding'. pth' file.
