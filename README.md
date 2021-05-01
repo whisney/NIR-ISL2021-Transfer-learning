@@ -97,5 +97,4 @@ We also wrote prediction codes for external data. For a given iris picture, the 
 **img_path** is the path of a picture and **save_dir** is the folder for saving predicted pictures.
 
 ## Contributing
-Yiwen Zhang
-Tianbao Liu
+Yiwen Zhang, Tianbao Liu
