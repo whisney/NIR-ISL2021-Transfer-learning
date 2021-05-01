@@ -91,7 +91,7 @@ The prediction results are saved in *NIR-ISL2021_predictions* folder. If you wan
 
 ### External data testing
 ![Alt text](/pic/pipeline.png)
-We also wrote prediction codes for external data. For a given iris picture, the iris mask and inner and outer contours can be obtained by the following code. We provide three models for you to choose from 'Africa', 'Asia' and 'M1'. At the same time, it provides the prediction of CPU version (**--gpu none**).
+We also wrote prediction codes for external data. For a given iris picture, the iris mask and inner and outer contours can be obtained by the following command. We provide three models for you to choose from 'Africa', 'Asia' and 'M1'. At the same time, it provides the prediction of CPU version (**--gpu none**).
 
     python predict_one_img.py --gpu 0 --img_path img_path --save_dir save_dir --model model
 **img_path** is the path of a picture and **save_dir** is the folder for saving predicted pictures.
