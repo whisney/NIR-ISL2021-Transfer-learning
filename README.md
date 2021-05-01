@@ -11,3 +11,5 @@ This repository is winning scheme of one of top three in [NIR-ISL 2021](https://
 * opencv-python
 * tensorboardX
 * segmentation_models_pytorch
+## Usage
+We upload all the tensorboard records in the training process and the final optimal model to [Baidu Cloud](https://pan.baidu.com/s/1C0D_PtN5s55rKn0azjGPLg) (x7nz).
