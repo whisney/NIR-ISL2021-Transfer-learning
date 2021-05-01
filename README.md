@@ -4,3 +4,10 @@ This repository is winning scheme of one of top three in NIR-ISL 2021 based on p
 ![Alt text](/pic/transfer.png)
 ## Requirements
 * python 3.6
+* pytorch 1.5+
+* scikit-learn
+* scikit-image
+* albumentations
+* opencv-python
+* tensorboardX
+* segmentation_models_pytorch
