@@ -78,3 +78,19 @@ Then fine-tune the iris pre-trained model on the subdatasets.
     python predict_local_iris_val.py --gpu 0 --net unet_resnet34 --fold 0 --model_path model_path --dataset subdataset
 **model_path** specifies the path of the corresponding'. pth' file. As with the above training command, **subdataset** chooses from chooses from 'Africa', 'Asia' and 'M1'.
  
+### Test set prediction
+Ensure that after downloading the trained code from Baidu Cloud and placing it in the specified location, execute the following codes in turn, and you can get the completely consistent test set prediction results provided by us in NIR-ISL2021.
+
+    python predict_seg_Africa.py --gpu 0
+    python predict_seg_Asia.py --gpu 0
+    python predict_seg_M1.py --gpu 0
+    python predict_local_Africa.py --gpu 0
+    python predict_local_Asia.py --gpu 0
+    python predict_local_M1.py --gpu 0
+The prediction results are saved in *NIR-ISL2021_predictions* folder. If you want to use your own trained model for prediction, you only need to modify the **model_path** in the'. py' file.
+
+### External data testing
+We also wrote prediction codes for external data. For a given iris picture, the iris mask and inner and outer contours can be obtained by the following code. We provide three models for you to choose from 'Africa', 'Asia' and 'M1'. At the same time, it also provides the prediction of CPU version (**--gpu none**).
+
+    python predict_one_img.py --gpu 0 --img_path img_path --save_dir save_dir --model model
+**img_path** is the path of a picture and **save_dir** is the folder for saving predicted pictures.
