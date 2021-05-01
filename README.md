@@ -90,6 +90,7 @@ Ensure that after downloading the trained code from Baidu Cloud and placing it i
 The prediction results are saved in *NIR-ISL2021_predictions* folder. If you want to use your own trained model for prediction, you only need to modify the **model_path** in the'. py' file.
 
 ### External data testing
+![Alt text](/pic/pipeline.png)
 We also wrote prediction codes for external data. For a given iris picture, the iris mask and inner and outer contours can be obtained by the following code. We provide three models for you to choose from 'Africa', 'Asia' and 'M1'. At the same time, it provides the prediction of CPU version (**--gpu none**).
 
     python predict_one_img.py --gpu 0 --img_path img_path --save_dir save_dir --model model
