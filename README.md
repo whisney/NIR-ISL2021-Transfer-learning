@@ -17,4 +17,13 @@ We upload all the tensorboard records in the training process and the final opti
 Five-fold cross-validation was used in our experiment. The split result we use is saved in the'. pkl' file under the' data' path. You can also get your own split result through the following code:
 
     python --data_dir data_dir --save_dir save_dir
+There are 'CASIA-Iris-Africa', 'CASIA-Iris-Asia' and 'CASIA-Iris-Mobile-V1.0' three folders under data_dir.
 ### Training
+Firstly, all the data are used to train an iris pre-training model.
+
+    # for semgentation
+    python train_seg.py --gpu 0 --bs 22 --name baseline --epoch 500 --net unet_resnet34 --fold 0 --dataset all
+    
+    # for location
+    python train_local_inner_outer.py --gpu 0 --bs 22 --name baseline --epoch 500 --net unet_resnet34 --fold 0 --dataset all
+Each code execution only trains one fold. Train fold 0, 1, 2, and 3 in turn.
