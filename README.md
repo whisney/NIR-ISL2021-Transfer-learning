@@ -76,4 +76,5 @@ Then fine-tune the iris pre-trained model on the subdatasets.
     
     # for location
     python predict_local_iris_val.py --gpu 0 --net unet_resnet34 --fold 0 --model_path model_path --dataset subdataset
-*model_path* specifies the path of the corresponding'. pth' file.
+**model_path** specifies the path of the corresponding'. pth' file. As with the above training command, **subdataset** chooses from chooses from 'Africa', 'Asia' and 'M1'.
+ 
