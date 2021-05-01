@@ -20,7 +20,7 @@ We upload all the tensorboard records in the training process and the final opti
 Five-fold cross-validation was used in our experiment. The split result we use is saved in the'. pkl' file under the' data' path. You can also get your own split result through the following code:
 
     python --data_dir data_dir --save_dir save_dir
-There are 'CASIA-Iris-Africa', 'CASIA-Iris-Asia' and 'CASIA-Iris-Mobile-V1.0' three folders under data_dir.
+There are 'CASIA-Iris-Africa', 'CASIA-Iris-Asia' and 'CASIA-Iris-Mobile-V1.0' three folders under **data_dir**.
 
 ### Training
 #### Baseline model
@@ -79,7 +79,7 @@ Then fine-tune the iris pre-trained model on the subdatasets.
 **model_path** specifies the path of the corresponding'. pth' file. As with the above training command, **subdataset** chooses from chooses from 'Africa', 'Asia' and 'M1'.
  
 ### Test set prediction
-Ensure that after downloading the trained code from Baidu Cloud and placing it in the specified location, execute the following codes in turn, and you can get the completely consistent test set prediction results provided by us in NIR-ISL2021.
+Ensure that after downloading the trained models from Baidu Cloud and placing it in the specified location, execute the following codes in turn, and you can get the completely consistent test set prediction results provided by us in NIR-ISL2021.
 
     python predict_seg_Africa.py --gpu 0
     python predict_seg_Asia.py --gpu 0
