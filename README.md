@@ -1,5 +1,5 @@
 # NIR-ISL2021-Transfer-learning
-This repository is winning scheme of one of top three in NIR-ISL 2021 based on pytorch implementation.
+This repository is winning scheme of one of top three in [NIR-ISL 2021](https://sites.google.com/view/nir-isl2021/home) based on pytorch implementation.
 ## Transfer Learning
 ![Alt text](/pic/transfer.png)
 ## Requirements
