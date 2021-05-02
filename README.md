@@ -19,8 +19,7 @@ We upload all the tensorboard records in the training process and the final opti
 ### Data split
 Five-fold cross-validation was used in our experiment. The split result we use is saved in the'. pkl' file under the' data' path. You can also get your own split result through the following code:
 
-    python --data_dir data_dir --save_dir save_dir
-There are 'CASIA-Iris-Africa', 'CASIA-Iris-Asia' and 'CASIA-Iris-Mobile-V1.0' three folders under **data_dir**.
+    python --data_dir data --save_dir data
 
 ### Training
 #### Baseline model
