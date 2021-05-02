@@ -15,7 +15,7 @@ This repository is winning scheme of one of top three in [NIR-ISL 2021](https://
 * segmentation_models_pytorch
 
 ## Usage
-We upload all the tensorboard records in the training process and the final optimal model to [Baidu Cloud](https://pan.baidu.com/s/1C0D_PtN5s55rKn0azjGPLg) (x7nz). Replace the downloaded folder with the trained_models folder in the root directory. All training codes are only considered to be completed on one GPU (RTX 2080Ti).
+We upload all the tensorboard records in the training process and the final optimal model to [Baidu Cloud](https://pan.baidu.com/s/1C0D_PtN5s55rKn0azjGPLg) (x7nz). Replace the downloaded folder with the trained_models folder in the root directory. Training and test data are downloaded from [NIR-ISL 2021](https://sites.google.com/view/nir-isl2021/home) and placed in the 'data' folder. All training codes are only considered to be completed on one GPU (RTX 2080Ti).
 ### Data split
 Five-fold cross-validation was used in our experiment. The split result we use is saved in the'. pkl' file under the' data' path. You can also get your own split result through the following code:
 
@@ -67,7 +67,7 @@ Then fine-tune the iris pre-trained model on the subdatasets.
     # CASIA-Iris-Asia
     python finetune_local_inner_outer.py --gpu 0 --bs 16 --name finetune --epoch 200 --net unet_resnet34 --fold 0 --dataset Asia --pretrained trained_models/All/Local_inner_outer/bsaeline_UNet_ResNet34/bs20_epoch500_fold0/best_model.pth
     # CASIA-Iris-Mobile-V1.0
-    python finetune_local_inner_outer.py --gpu 0 --bs 28 --name finetune --epoch 000 --net unet_resnet34 --fold 0 --dataset M1 --pretrained trained_models/All/Local_inner_outer/bsaeline_UNet_ResNet34/bs20_epoch500_fold0/best_model.pth
+    python finetune_local_inner_outer.py --gpu 0 --bs 28 --name finetune --epoch 100 --net unet_resnet34 --fold 0 --dataset M1 --pretrained trained_models/All/Local_inner_outer/bsaeline_UNet_ResNet34/bs20_epoch500_fold0/best_model.pth
 
 ### Validation set evaluation
 
