@@ -19,7 +19,7 @@ We upload all the tensorboard records in the training process and the final opti
 ### Data split
 Five-fold cross-validation was used in our experiment. The split results we used is saved in the'. pkl' file under the' data' folder. You can also get your own split results through the following code:
 
-    python --data_dir data --save_dir data
+    python split.py --data_dir data --save_dir data
 
 ### Training
 #### Baseline model
