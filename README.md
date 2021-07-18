@@ -33,7 +33,7 @@ Training baseline model commands are as follows:
     # CASIA-Iris-Mobile-V1.0
     python train_seg.py --gpu 0 --bs 28 --name baseline --epoch 400 --net unet_resnet34 --fold 0 --dataset M1
     
-    # for location
+    # for localization
     # CASIA-Iris-Africa
     python train_local_inner_outer.py --gpu 0 --bs 16 --name baseline --epoch 500 --net unet_resnet34 --fold 0 --dataset Africa
     # CASIA-Iris-Asia
@@ -48,7 +48,7 @@ Firstly, all the data are used to train an iris pre-trained model.
     # for semgentation
     python train_seg.py --gpu 0 --bs 22 --name baseline --epoch 500 --net unet_resnet34 --fold 0 --dataset all
     
-    # for location
+    # for localization
     python train_local_inner_outer.py --gpu 0 --bs 22 --name baseline --epoch 500 --net unet_resnet34 --fold 0 --dataset all
 Then fine-tune the iris pre-trained model on the subdatasets.
 
@@ -60,7 +60,7 @@ Then fine-tune the iris pre-trained model on the subdatasets.
     # CASIA-Iris-Mobile-V1.0
     python finetune_seg.py --gpu 0 --bs 28 --name finetune --epoch 100 --net unet_resnet34 --fold 0 --dataset M1 --pretrained trained_models/All/Seg/baseline_UNet_ResNet34/bs22_epoch500_fold0/best_acc.pth
     
-    # for location
+    # for localization
     # CASIA-Iris-Africa
     python finetune_local_inner_outer.py --gpu 0 --bs 16 --name finetune --epoch 200 --net unet_resnet34 --fold 0 --dataset Africa --pretrained trained_models/All/Local_inner_outer/bsaeline_UNet_ResNet34/bs20_epoch500_fold0/best_model.pth
     # CASIA-Iris-Asia
@@ -73,7 +73,7 @@ Then fine-tune the iris pre-trained model on the subdatasets.
     # for semgentation
     python predict_seg_val.py --gpu 0 --net unet_resnet34 --fold 0 --model_path model_path --dataset subdataset
     
-    # for location
+    # for localization
     python predict_local_iris_val.py --gpu 0 --net unet_resnet34 --fold 0 --model_path model_path --dataset subdataset
 **model_path** specifies the path of the corresponding'. pth' file. As with the above training command, **subdataset** chooses from chooses from 'Africa', 'Asia' and 'M1'.
  
