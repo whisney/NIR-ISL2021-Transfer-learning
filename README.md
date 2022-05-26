@@ -15,7 +15,7 @@ This repository is top one scheme in [NIR-ISL 2021](https://sites.google.com/vie
 * segmentation_models_pytorch
 
 ## Usage
-We upload all the tensorboard records in the training process and the final optimal models to [Google Drive](https://drive.google.com/drive/folders/1dmRIg5oTIALqrZheJq3baZ5MQ89Em8aM?usp=sharing)[Baidu Cloud](https://pan.baidu.com/s/1Sd5_mNzt4SEM32isYxxE5Q) (sd4g). Replace the downloaded folder with the 'trained_models' folder in the root directory. Training and test data are downloaded from [NIR-ISL-2021](https://github.com/xiamenwcy/NIR-ISL-2021) and placed in the 'data' folder. All training codes are only considered to be completed on one GPU (RTX 2080Ti).
+We upload all the tensorboard records in the training process and the final optimal models to [[Google Drive]](https://drive.google.com/drive/folders/1dmRIg5oTIALqrZheJq3baZ5MQ89Em8aM?usp=sharing) [[Baidu Cloud]](https://pan.baidu.com/s/1Sd5_mNzt4SEM32isYxxE5Q) (sd4g). Replace the downloaded folder with the 'trained_models' folder in the root directory. Training and test data are downloaded from [NIR-ISL-2021](https://github.com/xiamenwcy/NIR-ISL-2021) and placed in the 'data' folder. All training codes are only considered to be completed on one GPU (RTX 2080Ti).
 ### Data split
 Five-fold cross-validation was used in our experiment. The split results we used is saved in the'. pkl' file under the' data' folder. You can also get your own split results through the following code:
 
