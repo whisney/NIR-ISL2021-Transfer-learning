@@ -15,7 +15,7 @@ This repository is top one scheme in [NIR-ISL 2021](https://sites.google.com/vie
 * segmentation_models_pytorch
 
 ## Usage
-We upload all the tensorboard records in the training process and the final optimal models to [Baidu Cloud](https://pan.baidu.com/s/1Sd5_mNzt4SEM32isYxxE5Q) (sd4g). Replace the downloaded folder with the 'trained_models' folder in the root directory. Training and test data are downloaded from [NIR-ISL-2021](https://github.com/xiamenwcy/NIR-ISL-2021) and placed in the 'data' folder. All training codes are only considered to be completed on one GPU (RTX 2080Ti).
+We upload all the tensorboard records in the training process and the final optimal models to [Google Drive](https://drive.google.com/drive/folders/1dmRIg5oTIALqrZheJq3baZ5MQ89Em8aM?usp=sharing)[Baidu Cloud](https://pan.baidu.com/s/1Sd5_mNzt4SEM32isYxxE5Q) (sd4g). Replace the downloaded folder with the 'trained_models' folder in the root directory. Training and test data are downloaded from [NIR-ISL-2021](https://github.com/xiamenwcy/NIR-ISL-2021) and placed in the 'data' folder. All training codes are only considered to be completed on one GPU (RTX 2080Ti).
 ### Data split
 Five-fold cross-validation was used in our experiment. The split results we used is saved in the'. pkl' file under the' data' folder. You can also get your own split results through the following code:
 
@@ -78,7 +78,7 @@ Then fine-tune the iris pre-trained model on the subdatasets.
 **model_path** specifies the path of the corresponding'. pth' file. As with the above training command, **subdataset** chooses from chooses from 'Africa', 'Asia' and 'M1'.
  
 ### Test set prediction
-Ensure that after downloading the trained models from Baidu Cloud and placing it in the specified location, execute the following codes in turn, and you can get the completely consistent test set prediction results provided by us in NIR-ISL2021.
+Ensure that after downloading the trained models from Google Drive or Baidu Cloud and placing it in the specified location, execute the following codes in turn, and you can get the completely consistent test set prediction results provided by us in NIR-ISL2021.
 
     python predict_seg_Africa.py --gpu 0
     python predict_seg_Asia.py --gpu 0
@@ -90,10 +90,11 @@ The prediction results are saved in 'NIR-ISL2021_predictions' folder. If you wan
 
 ### External data testing
 ![Alt text](/pic/pipeline.png)
-We also wrote prediction codes for external data. For a given iris picture, the iris mask and inner and outer contours can be obtained by the following command. We provide three models for you to choose from 'Africa', 'Asia' and 'M1'. At the same time, it provides the prediction of CPU version (**--gpu none**).
+We also open source prediction codes for external data. For a given iris picture, the iris mask and inner and outer contours can be obtained by the following command. We provide three models for you to choose from 'Africa', 'Asia' and 'M1'. Besides, the prediction with CPU is provided (**--gpu none**).
 
     python predict_one_img.py --gpu 0 --img_path img_path --save_dir save_dir --model model
 **img_path** is the path of a picture and **save_dir** is the folder for saving predicted pictures.
 
 ## Contributing
 Yiwen Zhang, Tianbao Liu
+School of Biomedical Engineering, Southern Medical University, Guangzhou, China
